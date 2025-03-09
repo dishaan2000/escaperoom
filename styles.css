@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: url('https://cur.cursors-4u.net/nature/nat-10/nat966.cur'), auto;
+}
+
+body {
+    font-family: 'Comic Sans MS', cursive;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: repeating-linear-gradient(45deg,
+            #ff69b4, #ff69b4 20px,
+            #ff1493 20px, #ff1493 40px);
+}
+
+.container {
+    width: 95%;
+    max-width: none;
+    padding: 15px;
+    text-align: center;
+    background-color: rgba(255, 182, 193, 0.9);
+    border: 8px dotted purple;
+    box-shadow: 0 0 20px #ff00ff, 0 0 40px #ff69b4;
+}
+
+h1 {
+    color: #800080;
+    margin-bottom: 20px;
+    font-size: 24px;
+    text-shadow: 3px 3px #ff69b4;
+    transform: rotate(-2deg);
+}
+
+input {
+    width: 100%;
+    padding: 15px;
+    margin: 15px 0;
+    border: 4px dashed #ff1493;
+    border-radius: 20px;
+    font-size: 18px;
+    background-color: #ffe6f2;
+    font-family: 'Comic Sans MS', cursive;
+}
+
+button {
+    background-color: #ff00ff;
+    color: yellow;
+    padding: 15px 30px;
+    border: 3px solid #800080;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 20px;
+    margin: 10px 0;
+    width: 80%;
+}
+
+button:hover {
+    background-color: #ff69b4;
+    transform: scale(1.1) rotate(-2deg);
+}
+
+#gif-container {
+    margin: 20px 0;
+    transform: rotate(-1deg);
+}
+
+#resultGif {
+    max-width: 90%;
+    height: auto;
+    border-radius: 10px;
+    border: 5px solid #ff69b4;
+}
+
+.coordinates {
+    font-size: 22px;
+    padding: 10px;
+    word-wrap: break-word;
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes wobble {
+    0% {
+        transform: rotate(2deg);
+    }
+
+    50% {
+        transform: rotate(-2deg);
+    }
+
+    100% {
+        transform: rotate(2deg);
+    }
+}
+
+@keyframes backgroundShift {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 40px 40px;
+    }
+}
+
+.slide-in {
+    animation: slideIn 0.5s ease-out forwards;
+}
+
+/* Add decorative cat emojis in corners */
+.container::before,
+.container::after {
+    content: '🐱';
+    font-size: 40px;
+    position: absolute;
+    animation: bounce 1s infinite;
+}
+
+.container::before {
+    top: 5px;
+    left: 5px;
+}
+
+.container::after {
+    bottom: 5px;
+    right: 5px;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}

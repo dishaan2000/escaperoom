@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buster's Verden</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div id="input-section">
+        <h1>"Mjav den hemmelige kode!"</h1>
+        <input type="text" id="secretInput" placeholder="Type here..." />
+        <button onclick="checkText()">Tryk med poten!</button>
+      </div>
+
+      <div id="gif-container" class="hidden">
+        <img id="resultGif" src="" alt="Result animation" />
+      </div>
+
+      <div id="success-section" class="hidden">
+        <h2>Mjav! Du klarede det!</h2>
+        <p>"Her er dine pote-koordinater!"</p>
+        <div class="coordinates">57.023467, 9.938210</div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
