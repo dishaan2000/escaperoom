@@ -1,5 +1,5 @@
 const correctText = "jessie er helten";
-const successGifUrl = "tillykke.png";
+const successGifUrl = "Tillykke.png";
 const failureGifUrl = "wopwop.png";
 
 function checkText() {
