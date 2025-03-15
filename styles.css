@@ -89,7 +89,11 @@ img {
     width: 100%;
     display: block;
 }
-
+#gif-container img {
+    max-height: 50vh;
+    width: auto;
+    margin: auto;
+}
 .coordinates {
     font-size: 22px;
     padding: 10px;
